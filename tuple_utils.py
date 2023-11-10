@@ -57,7 +57,7 @@ def print_indexes_and_entries(indexes: Iterable, entries: Iterable) -> None:
 
     # write a for loop to print each pair
     for index, entry in zipped_list:
-        
+
         #  use a string formatter, make index a string so numbers left align and pass test
         print(f'Index: {str(index):10} Entry: {entry}')         
         
@@ -74,5 +74,19 @@ def print_items_with_index(items: Iterable):
     :param items: A tuple or a list
     :return: None
     """
-    pass  # remove pass statement and implement me
+    
+    # the book helps a lot, tuple & dictionary chapters, make items a list, get length
+    # zip items with range of its length, put that in dictionary, index will start at 0 for each item, as tuples
+    t_list = list(items)
+    t_len = len(t_list)
+    d = dict(zip(items, range(0, t_len)))
+    
+    # print index must start at 1, print each item, which is a tuple, from the dictionary formatted
+    for i in d:
+        print(f'{(d[i]+1)}: {i}')
+    
+    
+    
+    
+    # remove pass statement and implement me
 
