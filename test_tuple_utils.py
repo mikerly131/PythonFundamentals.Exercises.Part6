@@ -37,7 +37,9 @@ class TupleUtilsTest(unittest.TestCase):
     def test_count_instances(self):
         test_cases = [
             ((1, 1, 1, 0), 1, 3),
-            (('A', 'B', 'B', 'C'), 'B', 2)
+            (('A', 'B', 'B', 'A'), 'B', 2),
+            (('F', 'f', 'A', 'F', 'R', 'z'), 'F', 2),
+            ((3, 4, 34, 5, (9/3), 4, 2, 3, 10), 3, 3)
         ]
         for tuple_to_evaluate, item_to_count, expected in test_cases:
             with self.subTest(f"{tuple_to_evaluate}, {item_to_count} -> {expected}"):
