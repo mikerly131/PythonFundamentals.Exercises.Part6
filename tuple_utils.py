@@ -28,14 +28,17 @@ def count_instances(collection: Tuple, instance: Union[int, str]) -> int:
     :param instance: An item in the collection parameter
     :return: An integer.
     """
+
+    """
     instance_count = 0
     for i in range(len(collection)):
         if instance == collection[i]:
             instance_count = instance_count + 1
 
     return instance_count
-
-    # remove pass statement and implement me
+    """
+    return collection.count(instance)
+     # remove pass statement and implement me
 
 
 def print_indexes_and_entries(indexes: Iterable, entries: Iterable) -> None:
@@ -48,7 +51,18 @@ def print_indexes_and_entries(indexes: Iterable, entries: Iterable) -> None:
     :param entries: A list or tuple
     :return: None
     """
-    pass  # remove pass statement and implement me
+
+    # zip the tuples or lists together
+    zipped_list = list(zip(indexes, entries))
+
+    # write a for loop to print each pair
+    for index, entry in zipped_list:
+        
+        #  use a string formatter, make index a string so numbers left align and pass test
+        print(f'Index: {str(index):10} Entry: {entry}')         
+        
+
+    # remove pass statement and implement me
 
 
 def print_items_with_index(items: Iterable):
