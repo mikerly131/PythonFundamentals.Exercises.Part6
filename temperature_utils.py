@@ -8,7 +8,10 @@ def convert_to_celsius(fahrenheit_temp: float) -> float:
     :param fahrenheit_temp: A float representing a temperature in fahrenheit
     :return: A float representing the corresponding value of the fahrenheit_temp parameter in celsius
     """
-    pass  # remove pass statement and implement me
+
+    #round to pass test, its 2 digit restriction on float
+    return round((fahrenheit_temp - 32.0) / 1.80, 2)
+    # remove pass statement and implement me
 
 
 def convert_to_fahrenheit(celsius_temp: float) -> int:
@@ -18,6 +21,7 @@ def convert_to_fahrenheit(celsius_temp: float) -> int:
     :param celsius_temp: A float representing a temperature in celsius
     :return:  A float representing the corresponding value of the celsius_temp parameter in fahrenheit
     """
+    return round((celsius_temp * 1.8) + 32, 2)
     pass  # remove pass statement and implement me
 
 
@@ -31,4 +35,6 @@ def temperature_tuple(temperatures: Iterable, input_unit_of_measurement: str) ->
     :param input_unit_of_measurement: The unit a measure to use to convert the values in the temperatures parameter
     :return: A tuple of tuples
     """
+
+    
     pass  # remove pass statement and implement me
