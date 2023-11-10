@@ -36,5 +36,24 @@ def temperature_tuple(temperatures: Iterable, input_unit_of_measurement: str) ->
     :return: A tuple of tuples
     """
 
+    # Setup a list to add tuples to as constructed, know length of list for iterations
+    tList = []
+    tempLen = len(temperatures)
     
-    pass  # remove pass statement and implement me
+    # Check if the input unit of measurement is c or f.  celsius or fahrenheit.
+    # Call the functions defined to get the 2nd value for each tuple
+    if input_unit_of_measurement == 'f':
+        for i in range(0, tempLen):
+            cTemp = convert_to_celsius(temperatures[i])
+            tTemp = temperatures[i], cTemp
+            tList.append(tTemp)
+    elif input_unit_of_measurement == 'c':
+        for i in range(0, tempLen):
+            fTemp = convert_to_fahrenheit(temperatures[i])
+            tTemp = temperatures[i], fTemp
+            tList.append(tTemp)
+    
+    tempsTuple = tuple(tList)
+    return tempsTuple
+        
+    # remove pass statement and implement me
