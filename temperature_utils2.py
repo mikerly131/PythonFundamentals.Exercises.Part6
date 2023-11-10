@@ -62,7 +62,7 @@ def temperature_tuple(temperatures: Iterable, input_unit_of_measurement: str, ou
     # There has got to be a simpler way to code this
     if input_unit_of_measurement == 'f' and output_unit == 'c':
         for i in range(0, tempLen):
-            cTemp = convert_to_celsius(temperatures[i])
+            cTemp = convert_fahrenheit_to_celsius(temperatures[i])
             tTemp = temperatures[i], cTemp
             tList.append(tTemp)
     elif input_unit_of_measurement == 'f' and output_unit == 'k':
@@ -77,7 +77,7 @@ def temperature_tuple(temperatures: Iterable, input_unit_of_measurement: str, ou
             tList.append(tTemp)     
     elif input_unit_of_measurement == 'c' and output_unit == 'f':
         for i in range(0, tempLen):
-            fTemp = convert_to_fahrenheit(temperatures[i])
+            fTemp = convert_celsius_to_fahrenheit(temperatures[i])
             tTemp = temperatures[i], fTemp
             tList.append(tTemp)
     elif input_unit_of_measurement == 'k' and output_unit == 'c':
