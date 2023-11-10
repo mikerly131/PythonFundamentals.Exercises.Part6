@@ -14,7 +14,7 @@ def convert_to_celsius(fahrenheit_temp: float) -> float:
     # remove pass statement and implement me
 
 
-def convert_to_fahrenheit(celsius_temp: float) -> int:
+def convert_to_fahrenheit(celsius_temp: float) -> float:
     """
     Given a float representing a temperature in celsius, return the corresponding value in fahrenheit.
 
