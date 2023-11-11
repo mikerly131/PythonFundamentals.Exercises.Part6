@@ -60,6 +60,7 @@ def temperature_tuple(temperatures: Iterable, input_unit_of_measurement: str, ou
     # Call the functions defined to get the 2nd value for each tuple
     
     # There has got to be a simpler way to code this
+    # Method to extract:   def convert_units(list, input unit, output unit)
     if input_unit_of_measurement == 'f' and output_unit == 'c':
         for i in range(0, tempLen):
             cTemp = convert_fahrenheit_to_celsius(temperatures[i])
